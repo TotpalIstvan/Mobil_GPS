@@ -104,6 +104,12 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        myTimer.cancel();
+    }
+
     public void init() {
         textViewGps = findViewById(R.id.textViewGps);
 
